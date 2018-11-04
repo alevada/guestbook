@@ -12,11 +12,24 @@
 	</head>
 	<body>
 		<div class="container">
+      
+      <?php if (isset($_GET['success'])) { ?>      
+    <div class="alert alert-success" role="alert">
+      This is a success alert!
+    </div>
+
+      <?php } else if (isset($_GET['error'])) { ?>
+    <div class="alert alert-danger" role="alert">
+      This is a danger alert—check it out!
+    </div>
+          <?php } ?>
+
+
   			<h2>Guestbook</h2>
-  			<form action="/index.html">
+        <form method="post" action="addtoguestbook.php">
   			<div class="form-group">
       			<label for="name">Name:</label>
-      			<input type="text" class="form-control" id="name" required>
+      			<input type="text" class="form-control" id="name" name="name" required>
     		</div>
     	<div class="form-group">
       		<label for="email">Email:</label>
@@ -24,7 +37,7 @@
     	</div>
     	<div class="form-group">
       		<label for="message">Message:</label>
-      		<textarea class="form-control" rows="5" id="message" required></textarea>
+      		<textarea class="form-control" rows="5" id="message" name="message" required></textarea>
     	</div>
     	<button type="submit" class="btn btn-info">Submit</button>
   		</form>
