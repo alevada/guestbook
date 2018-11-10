@@ -9,36 +9,28 @@
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" class="titleind" href="styles.css">
   </head>
- <body class="gbook-image">
+ <body>
   <div class="container">
-      
-      <?php if (isset($_GET['success'])) { ?>      
-        <div class="alert alert-success" role="alert">
-          This is a success alert!
-        </div>
+    <h1>Guestbook</h1>
 
-      <?php } else if (isset($_GET['error'])) { ?>
-        <div class="alert alert-danger" role="alert">
-          This is a danger alert — check it out!
+    <?php if (isset($_GET['success'])) { ?>      
+      <div class="alert alert-success" role="alert">
+        This is a success alert!
+      </div>
 
-          <?php if (isset($_GET['error_message'])) { ?>
-            <?= "<br/>".$_GET['error_message']; ?>
-          <?php } ?>
-        </div>
-      <?php } ?>
+    <?php } else if (isset($_GET['error'])) { ?>
+      <div class="alert alert-danger" role="alert">
+        This is a danger alert — check it out!
 
+        <?php if (isset($_GET['error_message'])) { ?>
+          <?= "<br/>".$_GET['error_message']; ?>
+        <?php } ?>
+      </div>
+    <?php } ?>
 
-        <h1>Guestbook</h1>
-        <link rel="stylesheet" href="styles.css">
-        <form method="post" action="add.php">
-          <button type="submit" class="btn btn-info btn-lg btn-block">Add new entry</button>
-        </form>
-        <form method="post" action="view.php">
-          <button type="submit" class="btn btn-info btn-lg btn-block">View entries</button>
-        </form>
-
-
-
-</body>
+    <a class="btn btn-primary btn-lg btn-block" href="add.php" role="button">Add new entry</a>
+    <a class="btn btn-primary btn-lg btn-block" href="view.php" role="button">View entries</a>
+  </body>
 </html>

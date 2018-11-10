@@ -12,41 +12,40 @@
   </head>
   <body>
     <div class="container">
-      
       <?php if (isset($_GET['success'])) { ?>      
-        <div class="alert alert-success" role="alert">
+      <div class="alert alert-success" role="alert">
           This is a success alert!
-        </div>
+      </div>
 
       <?php } else if (isset($_GET['error'])) { ?>
         <div class="alert alert-danger" role="alert">
           This is a danger alert — check it out!
 
           <?php if (isset($_GET['error_message'])) { ?>
-            <?= "<br/>".$_GET['error_message']; ?>
+          <?= "<br/>".$_GET['error_message']; ?>
           <?php } ?>
         </div>
       <?php } ?>
 
-
-        <h2>Guestbook</h2>
-        <form method="post" action="add.php">
+      <h2>Add your infos</h2>
+        <!--<link rel="stylesheet" class="titleadd" href="styles.css">-->     
+      <a class="btn btn-primary pull-right" href="<?= $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/guestbook'; ?>" role="button">Go back</a>   
+    
+      <form method="post" action="php/functions.php">
         <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" required>
         </div>
-      <div class="form-group">
+        <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" class="form-control" id="email" placeholder="email" name="email">
-      </div>
-      <div class="form-group">
+        </div>
+        <div class="form-group">
           <label for="message">Message:</label>
           <textarea class="form-control" rows="5" id="message" name="message" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-info">Submit</button>
-      <a class="btn btn-primary" href="view.php" role="button">View Guestbook</a>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-    </div>
 
 
 
