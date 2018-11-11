@@ -1,10 +1,10 @@
 <?php
-	require_once('php/connection.php');
+	require_once($_SERVER['DOCUMENT_ROOT'].'/guestbook/php/connection.php');
 
 	// wrapper function for insertion
 	function insertNewEntry () {
 		global $con;
-		
+
 		$name 		= $_POST['name'];
 		$email 		= $_POST['email'];
 		$message 	= $_POST['message'];
@@ -33,11 +33,7 @@
 		}
 	}
 
-
 	// calls
-	if (isset($_POST)) {
-		//return insertNewEntry();
+	if (isset($_POST) && !empty($_POST)) {
+		return insertNewEntry();
 	}
-	
-
-

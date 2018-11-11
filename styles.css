@@ -1,7 +1,10 @@
 
 h1 {
-	color: orange;
+	color: black;
+	font-weight: bold;
 	text-align: center;
+	font-size: 50px;
+	margin-top: 20px;
 }
 
 .btn-info {
@@ -17,6 +20,38 @@ body {
 	background-repeat: no-repeat;  /*Do not repeat the image */
 	background-size: 1000px 1000px;  /*Resize the background image to cover the entire container*/
 }
+
+.a {
+	background-color: #0582ff;
+	outline: #0582ff;
+	margin-top: 140px;
+	font-size: 30px;
+	color: black;
+}
+
+.b {
+	background-color: #0582ff;
+	outline: #0582ff;
+	font-size: 30px;
+	color: black;
+}
+
+.c {
+	background-color: #0582ff;
+	outline: #0582ff;
+}
+
+.d {
+	background-color: #0582ff;
+	outline: #0582ff;
+}
+
+.mag_bot {
+	margin-bottom: 10px;
+}
+
+
+
 
 /*.titleadd {
 	color: blue;

@@ -1,32 +1,19 @@
 <?php
-
 /*-------------------CORECT: PDO db conn----------------------*/
+	global $con;
 
-global $con;
+	$hostname='localhost';
+	$username='ale';
+	$password='ale';
 
-$hostname='localhost';
-$username='ale';
-$password='ale';
-
-try {
-    $con = new PDO("mysql:host=$hostname;dbname=guestbook",$username,$password);
-	/*$stmt = $dbh->prepare("SELECT * FROM gbook");
-	$stmt->execute();
-	$result = $stmt->fetchAll();
-
-	foreach($result as $row){
-			header('Location: http://localhost/guestbook?success'); //$_SERVER[]
-	   	}*/
-} catch (Exception $e) {
-	//echo $e->getMessage();
-	header('Location: http://localhost/guestbook?error&error_message='.$e->getMessage());
-}
+	try {
+	    $con = new PDO("mysql:host=$hostname;dbname=guestbook",$username,$password);
+	} catch (Exception $e) {
+		header('Location: http://localhost/guestbook?error&error_message='.$e->getMessage());
+	}
 
 
  
-
-
-
 /*   ------- CORECT: MYSQLI db conn ----------------------------------------------
 $host = "localhost";
 $username = "ale";
