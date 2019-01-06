@@ -26,8 +26,8 @@
         <?php } ?>
       </div>
       <?php } ?>
-      <a class="btn btn-primary a btn-lg btn-block" href="add.php" role="button">Add new entry</a>
-      <a class="btn btn-primary b btn-lg btn-block" href="view.php" role="button">View entries</a>
+      <a class="btn btn-primary new btn-lg btn-block" href="add.php" role="button">Add new entry</a>
+      <a class="btn btn-primary view btn-lg btn-block" href="view.php" role="button">View entries</a>
     </div>
   </body>
 </html>

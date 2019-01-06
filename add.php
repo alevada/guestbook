@@ -13,9 +13,9 @@
   <body>
     <div class="container">
       <div class="panel panel-default">
-        <div class="panel-heading">
-          Add your info
-          <a class="btn btn-primary c pull-right mag_bot" href="<?= $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/guestbook'; ?>" role="button">Home</a>
+        <div class="panel-heading text-center">
+          <h4><b>Add your info</b></h4>
+          <a class="btn btn-primary btn-lg pull-right mag_bot" href="<?= $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/guestbook'; ?>" role="button">Home</a>
         </div>
         <div class="panel-body">
           <form method="post" action="php/functions.php">
@@ -31,7 +31,7 @@
               <label for="message">Message:</label>
               <textarea class="form-control" rows="5" id="message" name="message" required></textarea>
             </div>
-            <button type="submit" class="btn d btn-primary pull-right">Submit</button>
+            <button type="submit" class="btn submit btn-primary btn-lg pull-right">Submit</button>
           </form>
         </div>
       </div>

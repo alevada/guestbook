@@ -17,9 +17,9 @@
   <body>
     <div class="container">
       <div class="panel panel-default">
-        <div class="panel-heading">
-          View entries
-          <a class="btn btn-primary c pull-right mag_bot" href="<?= $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/guestbook'; ?>" role="button">Home</a>
+        <div class="panel-heading text-center">
+          <h4><b>View entries</b></h4>
+          <a class="btn btn-primary btn-lg pull-right" href="<?= $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/guestbook'; ?>" role="button">Home</a>
         </div>
         <div class="panel-body">
           <table class="table table-striped table-hover">
